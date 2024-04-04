@@ -5,10 +5,11 @@ import { taskContext } from '../Context/Context';
 
 
 
-export const ItemTask = ({title,description, id}) => {
+export const ItemTask = ({title,description,id}) => {
   const secondContext = useContext(taskContext);
   const [IsActive, setIsActive] = useState(false);
 
+  
  const statesCheckbox =()=>{
    setIsActive(!IsActive)
   const abc = secondContext.tasksFilter.map(tas=>{
@@ -17,10 +18,11 @@ export const ItemTask = ({title,description, id}) => {
 
         return { ...tas, state: true }; 
       } else {
-        return { ...tas  }; 
+        return tas ; 
       }
-
+ 
   })
+  secondContext.settaskFilter(abc);
 console.log(abc);
  }
 

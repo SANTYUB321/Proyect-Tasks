@@ -13,6 +13,8 @@ export const Main = () => {
   const [titleTask, setTitleTask] = useState('')
   const [descriptionTask, setDescripcionTask] = useState('')
   const [taskId, settaskId] = useState(1)
+   const completedTasks = otherContext.tasksFilter.filter(task => task.state);
+ const earringsTasks = otherContext.tasksFilter.filter(task => !task.state);
 
 const handleTask= ()=>{
   const newTask ={
@@ -45,7 +47,7 @@ const handleTask= ()=>{
     </div>
     <div className='recordatorio'>
       <div className='div2'>
-        <h2>Usted tiene <p>0</p> tareas completadas y <p>0</p> tareas pendientes</h2>
+        <h2>Usted tiene {completedTasks.length} tareas completadas y {earringsTasks.length} tareas pendientes</h2>
         </div>
         <hr />
     </div>
