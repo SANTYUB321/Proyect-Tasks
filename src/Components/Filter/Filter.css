@@ -1,0 +1,21 @@
+.filter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
+    
+}
+.filter h2{
+    margin: 0 20px 0 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+#select{
+    border-radius: 6px;
+    border: inset rgb(140, 140, 140);
+    display: flex;
+        justify-content: center;
+        align-items: center;
+}

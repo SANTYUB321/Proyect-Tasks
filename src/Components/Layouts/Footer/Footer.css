@@ -1,0 +1,21 @@
+footer{
+    background-color: #000000;
+    box-shadow: inset 0px 0px 12px 2px rgba(0,0,255,1);
+    
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer h2{
+    padding: 0;
+    margin: 0;
+    font-size: 9vh;
+}
+@media (max-width:768px) {
+footer h2 {
+        font-size: 6vh;
+    }
+}
