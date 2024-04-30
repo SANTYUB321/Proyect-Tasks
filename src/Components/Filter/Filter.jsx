@@ -6,20 +6,22 @@ import { taskContext } from '../Context/Context'
 
 export const Filter = () => {
 
-  const context = useContext (taskContext)
+  const context = useContext (taskContext);
+// const resultfilter1 = [context.tasksFilter.filter(task => !task.status)];
+// const resultfilter2 = [context.tasksFilter.filter(task => task.status)];
 
 const handleFilters = (event) => {
   let currentOption = event.target.value
   console.log(currentOption);
  
   if (currentOption === 'Earrings'){
-    context.settaskFilter(context.tasksFilter.filter(task => !task.status))
+     context.setTasks(context.tasksFilter.filter(tasks=> !tasks.state))
   }
   else if (currentOption === 'Solved'){
-    context.settaskFilter(context.tasksFilter.filter(task => task.status))
+ context.setTasks(context.tasksFilter.filter(tasks=> tasks.state))
   }
   else{ 
-    context.settaskFilter(context.tasksFilter)
+    context.setTasks(context.tasksFilter)
   }
 }
 

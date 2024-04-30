@@ -11,6 +11,8 @@ export const ItemTask = ({title,description,id}) => {
 
   
  const statesCheckbox =()=>{
+
+  
    setIsActive(!IsActive)
   const abc = secondContext.tasksFilter.map(tas=>{
   
@@ -30,8 +32,8 @@ console.log(abc);
   return (
     <div className='item'>
       
-    <li  className={ IsActive? `LiActive` : ` LiIdle` } id=''>
-      <div className={ IsActive? `active` : ` idle` }/>
+    <li  className={ IsActive ? `LiActive` : ` LiIdle` } id=''>
+      <div className={ IsActive ? `active` : ` idle` }/>
       <span>{title}</span>
     <span>{description}</span>
     </li>

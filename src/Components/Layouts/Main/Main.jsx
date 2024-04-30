@@ -26,6 +26,7 @@ const handleTask= ()=>{
   
   let ListTasks =[...otherContext.tasksFilter, newTask]
   otherContext.settaskFilter(ListTasks)
+  otherContext.setTasks(ListTasks)
   settaskId(taskId + 1)
 }
 
@@ -54,7 +55,7 @@ const handleTask= ()=>{
     <Filter/>
     <Task>
       {
-      otherContext.tasksFilter.map( task =>
+      otherContext.tasks.map( task =>
       
       <ItemTask title={task.title} id={task._id} description={task.description}></ItemTask>)
 
